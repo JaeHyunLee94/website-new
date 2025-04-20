@@ -14,7 +14,7 @@ const VoxelDog = () => {
   const refRenderer = useRef()
 
   // ← Use a root‑relative URL so it works both locally and on Netlify
-  const urlDogGLB = '/dog.glb'
+  const urlDogGLB = '/cat.glb'
 
   const handleWindowResize = useCallback(() => {
     const renderer = refRenderer.current
@@ -73,8 +73,14 @@ const VoxelDog = () => {
     // Load Model
     loadGLTFModel(scene, urlDogGLB, {
       receiveShadow: false,
-      castShadow: false
-    }).then(() => {
+      castShadow: false,
+      scale: 4     
+    }).then(obj => {
+      // Uniform scale (if you already set that)
+      // ← Here’s the translation:
+      obj.position.set( 0, 2, 0 )  
+      // moves the model +1 on X, +0.5 on Y, and –2 on Z
+    
       animate()
       setLoading(false)
     }).catch(err => {
@@ -92,7 +98,7 @@ const VoxelDog = () => {
         const p = initialCameraPosition
         const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-        camera.position.y = 10
+        camera.position.y = 7
         camera.position.x =
           p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
         camera.position.z =

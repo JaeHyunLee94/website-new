@@ -14,6 +14,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { useColorModeValue } from '@chakra-ui/react'
 // import { GridItem } from '../components/grid-item'
 import {IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
@@ -21,20 +22,23 @@ import Image from 'next/image'
 const Home = () => (
   <Layout>
     <Container maxW="1000px" px={6} mx="auto">
-      {/* <Box
+      <Box
         borderRadius="lg"
         mb={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        // bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
-      </Box> */}
+        (Generated with {' '}
+          <Link as={NextLink} href="https://www.meshy.ai/discover" passHref scroll={false}>
+            MeshAI
+          </Link>)
+      </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title" mb={5}>
+          <Heading as="h2" variant="page-title"mt={5} mb={5}>
             JaeHyun Lee
           </Heading>
           
