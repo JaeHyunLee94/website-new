@@ -25,7 +25,7 @@ const Main = ({ children, router }) => {
         <meta name="og:title" content="JaeHyun Lee" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.craftz.dog/card.png" />
-        <title>JaeHyun's Homepage</title>
+        <title>JaeHyun&apos;s Homepage</title>
       </Head>
 
       <NavBar path={router.asPath} />

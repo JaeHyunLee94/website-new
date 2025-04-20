@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { PubGridItem, PubGridItemLink } from '../components/grid-item'
+import { PubGridItem } from '../components/grid-item'
 
 import thumbBlackHole from '../public/images/projects/blackhole.gif'
 import thumbFEM from '../public/images/projects/fem.gif'

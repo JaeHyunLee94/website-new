@@ -1,9 +1,9 @@
 import { Container, Heading, SimpleGrid, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { PubGridItem, PubGridItemLink } from '../components/grid-item'
+import { PubGridItem } from '../components/grid-item'
 
-import thumbBlackHole from '../public/images/publications/blackhole.gif'
+
 import thumbInversion1 from '../public/images/publications/inversion1.gif'
 import thumbInversion2 from '../public/images/publications/inversion2.gif'
 
