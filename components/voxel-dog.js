@@ -65,6 +65,17 @@ const VoxelDog = () => {
     const ambientLight = new THREE.AmbientLight(0xcccccc, Math.PI)
     scene.add(ambientLight)
 
+     // Directional light to cast shadows
+    const dirLight = new THREE.DirectionalLight(0xffffff, 3.0)
+    dirLight.position.set(0, 20, 0)
+    dirLight.castShadow = true
+    // optional: tweak shadow resolution
+    dirLight.shadow.mapSize.width  = 1024
+    dirLight.shadow.mapSize.height = 1024
+    dirLight.shadow.camera.near    = 0.5
+    dirLight.shadow.camera.far     = 100
+    scene.add(dirLight)
+
     // Controls
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.autoRotate = true
@@ -72,8 +83,8 @@ const VoxelDog = () => {
 
     // Load Model
     loadGLTFModel(scene, urlDogGLB, {
-      receiveShadow: false,
-      castShadow: false,
+      receiveShadow: true,
+      castShadow: true,
       scale: 4     
     }).then(obj => {
       // Uniform scale (if you already set that)
