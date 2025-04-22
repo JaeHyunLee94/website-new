@@ -78,7 +78,7 @@ const Projects = () => (
             // author="none"
             paper="none"
             video="none"
-            code="https://github.com/JaeHyunLee94/mpm_solver?tab=readme-ov-file"
+            code="https://github.com/JaeHyunLee94/Stable_Fluid_3D_taichi"
             slides="none"
           >
           </PubGridItem>
