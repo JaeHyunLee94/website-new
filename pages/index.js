@@ -77,9 +77,7 @@ const Home = () => (
         <Paragraph>
         Hi! 👋👋👋<br /><br />
         I’m a second-year Ph.D. student in Computer Sciences at the {' '}
-          <Link as={NextLink} href="https://www.wisc.edu/" passHref scroll={false}>
-            University of Wisconsin-Madison
-          </Link>, advised by {' '}
+          <Link as={NextLink} href="https://www.wisc.edu/" passHref scroll={false}>University of Wisconsin-Madison</Link>, advised by {' '}
           <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" passHref scroll={false}>
             Prof. Eftychios Sifakis
           </Link>.<br /><br />
