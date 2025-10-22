@@ -127,6 +127,7 @@ const Home = () => (
           Research Keywords
         </Heading>
         <List spacing={2} pl={4} styleType="disc">
+          <ListItem>Computer Graphics</ListItem>
           <ListItem>Physics-based simulation</ListItem>
           <ListItem>High-Performance Computing</ListItem>
           <ListItem>Scalable simulation</ListItem>
