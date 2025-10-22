@@ -76,10 +76,10 @@ const Home = () => (
         </Heading>
         <Paragraph>
         Hi! 👋👋👋<br /><br />
-        I’m a first-year Ph.D. student in Computer Sciences at the {' '}
+        I’m a second-year Ph.D. student in Computer Sciences at the {' '}
           <Link as={NextLink} href="https://www.wisc.edu/" passHref scroll={false}>
             University of Wisconsin-Madison
-          </Link>, currently working with {' '}
+          </Link>, advised by {' '}
           <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" passHref scroll={false}>
             Prof. Eftychios Sifakis
           </Link>.<br /><br />
@@ -129,7 +129,7 @@ const Home = () => (
           Research Keywords
         </Heading>
         <List spacing={2} pl={4} styleType="disc">
-          <ListItem>Physical Simulation</ListItem>
+          <ListItem>Physics-based simulation</ListItem>
           <ListItem>High-Performance Computing</ListItem>
           <ListItem>Scalable simulation</ListItem>
           {/* <ListItem>Computational Geometry</ListItem> */}
