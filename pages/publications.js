@@ -6,7 +6,8 @@ import { PubGridItem } from '../components/grid-item'
 
 import thumbInversion1 from '../public/images/publications/inversion1.gif'
 import thumbInversion2 from '../public/images/publications/inversion2.gif'
-
+import thumbDimension from '../public/images/publications/dimension.gif'
+import thumbConvSolve from '../public/images/publications/convsolve.gif'
 
 
 const Publications = () => (
@@ -16,7 +17,41 @@ const Publications = () => (
         Publications
       </Heading>
 
+
+
       <SimpleGrid columns={{sm:1}} gap={6}>
+        <Section>
+          <PubGridItem
+            id="convsolve"
+            title="Convolutional PDE solver"
+            thumbnail={thumbConvSolve}
+            journal="(to be submitted)"
+            project_page="none"
+            // author="none"
+            paper="none"
+            video="https://www.notion.so/Convolution-Solver-video-28b939b1e3fc807caa45ee0fadc3afc2?source=copy_link"
+            code="none"
+            slides="none"
+          >
+          </PubGridItem>
+        </Section>
+
+
+        <Section>
+          <PubGridItem
+            id="dimension_expansion"
+            title="Dimension Expansion for Untangling Mass-spring System"
+            thumbnail={thumbDimension}
+            journal="(under review)"
+            project_page="none"
+            author=<p>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</p>
+            paper="none"
+            video="https://drive.google.com/file/d/1dB_Nc5k5oSwC9TaKBFeRLPEFaWt_ckt4/view"
+            code="none"
+            slides="none"
+          >
+          </PubGridItem>
+        </Section>
 
         <Section>
           <PubGridItem

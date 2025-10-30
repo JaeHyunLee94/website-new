@@ -32,7 +32,7 @@ const Home = () => (
       >
         (Generated with {' '}
           <Link as={NextLink} href="https://www.meshy.ai/discover" passHref scroll={false}>
-            MeshAI
+            MeshyAI
           </Link>)
       </Box>
 
@@ -76,7 +76,7 @@ const Home = () => (
         </Heading>
         <Paragraph>
         Hi! 👋👋👋<br /><br />
-        I’m a second-year Ph.D. student in Computer Sciences at the {' '}
+        I’m a second-year Ph.D. student in Computer Sciences department at the {' '}
           <Link as={NextLink} href="https://www.wisc.edu/" passHref scroll={false}>University of Wisconsin-Madison</Link>, advised by {' '}
           <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" passHref scroll={false}>
             Prof. Eftychios Sifakis
