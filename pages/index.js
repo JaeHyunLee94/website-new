@@ -18,6 +18,7 @@ import Section from '../components/section'
 // import { GridItem } from '../components/grid-item'
 import {IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
+import { Text } from '@chakra-ui/react'
 
 const Home = () => (
   <Layout>
@@ -100,26 +101,12 @@ const Home = () => (
         
         <br /><br />
         Email: jaehyun.lee [at] wisc [dot] edu
-          {/* Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
-          <Link
-            as={NextLink}
-            href="https://www.youtube.com/devaslife"
-            passHref
-            target="_blank"
-          >
-            Dev as Life
-          </Link>
-          &quot; has more than 100k subscribers. */}
+        <br /><br />
+        <Text color="red.400" fontWeight="bold">
+          📢 I am actively seeking internship opportunities for 2026 Summer!
+        </Text>
+
+
         </Paragraph>
 
 
@@ -194,23 +181,7 @@ const Home = () => (
           B.S. in Mechanical Engineering, Korea University
         </BioSection>
       </Section>
-{/* 
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
-      </Section> */}
+
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -250,55 +221,11 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-          {/* <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem> */}
+
         </List>
 
-        {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;200k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid> */}
-{/* 
-        <Heading as="h3" variant="section-title">
-          Newsletter
-        </Heading>
-        <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
-        </p>
 
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="https://www.devas.life/"
-            scroll={false}
-            leftIcon={<EmailIcon />}
-            colorScheme="teal"
-          >
-            Sign up my newsletter here
-          </Button>
-        </Box> */}
+
       </Section>
     </Container>
   </Layout>
