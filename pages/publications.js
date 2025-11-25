@@ -40,12 +40,12 @@ const Publications = () => (
         <Section>
           <PubGridItem
             id="dimension_expansion"
-            title="Dimension Expansion for Untangling Mass-spring System"
+            title="Computer Animation and Virtual Worlds (CAVW), 2025"
             thumbnail={thumbDimension}
             journal="(under review)"
             project_page="none"
             author=<p>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</p>
-            paper="none"
+            paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.70079"
             video="https://drive.google.com/file/d/1dB_Nc5k5oSwC9TaKBFeRLPEFaWt_ckt4/view"
             code="none"
             slides="none"
