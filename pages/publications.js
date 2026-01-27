@@ -7,7 +7,7 @@ import { PubGridItem } from '../components/grid-item'
 import thumbInversion1 from '../public/images/publications/inversion1.gif'
 import thumbInversion2 from '../public/images/publications/inversion2.gif'
 import thumbDimension from '../public/images/publications/dimension.gif'
-import thumbConvSolve from '../public/images/publications/convsolve.gif'
+// import thumbConvSolve from '../public/images/publications/convsolve.gif'
 
 
 const Publications = () => (
