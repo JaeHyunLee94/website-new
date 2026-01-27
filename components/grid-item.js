@@ -10,11 +10,11 @@ var make_link = function (url, text, slash) {
   }
   if (slash) {
     // return <><Link as={NextLink} href={url} target="_blank">{text}</Link> / </>
-    return <Text fontSize={14} display="inline"><nobr>{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link> / </nobr></Text>
+    return <Text as="span" fontSize={14} display="inline"><nobr>{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link> / </nobr></Text>
   }
   else {
     // return <Link as={NextLink} href={url} target="_blank">{text}</Link>
-    return <Text fontSize={14} display="inline">{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link></Text>
+    return <Text as="span" fontSize={14} display="inline">{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link></Text>
   }
 }
 

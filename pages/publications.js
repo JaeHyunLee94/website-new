@@ -20,7 +20,7 @@ const Publications = () => (
 
 
       <SimpleGrid columns={{sm:1}} gap={6}>
-        <Section>
+        {/* <Section>
           <PubGridItem
             id="convsolve"
             title="Convolutional PDE solver"
@@ -34,7 +34,7 @@ const Publications = () => (
             slides="none"
           >
           </PubGridItem>
-        </Section>
+        </Section> */}
 
 
         <Section>
@@ -44,7 +44,10 @@ const Publications = () => (
             thumbnail={thumbDimension}
             journal="Computer Animation and Virtual Worlds (CAVW), 2025"
             project_page="none"
-            author=<p>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</p>
+            author={
+                <>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</>
+            }
+            // <p>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.70079"
             video="https://drive.google.com/file/d/1dB_Nc5k5oSwC9TaKBFeRLPEFaWt_ckt4/view"
             code="none"
@@ -60,7 +63,10 @@ const Publications = () => (
             thumbnail={thumbInversion2}
             journal="Computer Animation and Virtual Worlds (CAVW), 2024"
             project_page="none"
-            author=<p>Heejo Jeong, Seung-wook Kim, <b>JaeHyun Lee</b>, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
+            author={
+              <>Heejo Jeong, Seung-wook Kim, <b>JaeHyun Lee</b>, Kiwon Um, Min Hyung Kee, and JungHyun Han</>
+            }
+            // <p>Heejo Jeong, Seung-wook Kim, <b>JaeHyun Lee</b>, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.2249"
             video="https://www.youtube.com/watch?v=ht_7iMMiJic"
             code="none"
@@ -76,7 +82,10 @@ const Publications = () => (
             thumbnail={thumbInversion1}
             journal="Computer Animation and Virtual Worlds (CAVW), 2023"
             project_page="none"
-            author=<p><b>JaeHyun Lee</b>, Seung-wook Kim, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
+            author={
+              <><b>JaeHyun Lee</b>, Seung-wook Kim, Kiwon Um, Min Hyung Kee, and JungHyun Han</>
+            }
+            // <p><b>JaeHyun Lee</b>, Seung-wook Kim, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.2183"
             video="https://www.youtube.com/watch?v=4UWKqwnEQkk"
             code="none"

@@ -42,8 +42,8 @@ const Home = () => (
           <Heading as="h2" variant="page-title"mt={5} mb={5}>
             JaeHyun Lee
           </Heading>
-          
-          <p>Computer Graphics Researcher</p>
+
+          <Text>Computer Graphics Researcher</Text>
         </Box>
         <Box
           flexShrink={0}
@@ -101,13 +101,12 @@ const Home = () => (
         
         <br /><br />
         Email: jaehyun.lee [at] wisc [dot] edu
-        <br /><br />
-        <Text color="red.400" fontWeight="bold">
-          📢 I am actively seeking internship opportunities for 2026 Summer!
-        </Text>
 
 
         </Paragraph>
+        <Text color="red.400" fontWeight="bold" mt={4}>
+          📢 I am actively seeking internship opportunities for 2026 Summer!
+        </Text>
 
 
         <Heading as="h3" variant="section-title" mt={10}>
