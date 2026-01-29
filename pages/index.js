@@ -62,7 +62,7 @@ const Home = () => (
             overflow="hidden"
           >
             <Image
-              src="/images/jaehyun.jpg"
+              src="/images/jh_cropped.jpeg"
               alt="Profile image"
               width="200"
               height="200"
@@ -101,12 +101,12 @@ const Home = () => (
         
         <br /><br />
         Email: jaehyun.lee [at] wisc [dot] edu
-
-
         </Paragraph>
-        <Text color="red.400" fontWeight="bold" mt={4}>
+
+
+        {/* <Text color="red.400" fontWeight="bold" mt={4}>
           📢 I am actively seeking internship opportunities for 2026 Summer!
-        </Text>
+        </Text> */}
 
 
         <Heading as="h3" variant="section-title" mt={10}>
