@@ -14,7 +14,7 @@ const VoxelDog = () => {
   const refRenderer = useRef()
 
   // ← Use a root‑relative URL so it works both locally and on Netlify
-  const urlDogGLB = '/cat.glb'
+  const urlDogGLB = '/dragon.glb'
 
   const handleWindowResize = useCallback(() => {
     const renderer = refRenderer.current
