@@ -151,7 +151,7 @@ const Home = () => (
 
       </Section>
 
-      {/* <Section delay={0.2}>
+      <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           News
         </Heading>
@@ -160,7 +160,7 @@ const Home = () => (
           Started Ph.D. program in Computer Sciences at University of Wisconsin-Madison!
         </BioSection>
 
-      </Section> */}
+      </Section>
 
 
       <Section delay={0.2}>
