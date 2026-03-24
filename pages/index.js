@@ -156,6 +156,10 @@ const Home = () => (
           News
         </Heading>
         <BioSection>
+          <BioYear>2026.2</BioYear>
+          Will be interning at <Link as={NextLink} href="https://research.nvidia.com/labs/prl/" passHref scroll={false}>NVIDIA High-Fidelity Physics Research</Link> Team this Summer!
+        </BioSection>
+        <BioSection>
           <BioYear>2024.8</BioYear>
           Started Ph.D. program in Computer Sciences at University of Wisconsin-Madison!
         </BioSection>
