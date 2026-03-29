@@ -20,9 +20,12 @@ import {IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
 import { Text } from '@chakra-ui/react'
 
-const Home = () => (
+const Home = () => {
+  const logoSize = 60 // Adjust this value to change all logo sizes globally
+
+  return (
   <Layout>
-    <Container maxW="1000px" px={6} mx="auto">
+    <Container maxW="800px" px={6} mx="auto">
       <Box
         borderRadius="lg"
         mb={6}
@@ -171,22 +174,73 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Education
         </Heading>
-        <BioSection>
-          <BioYear>2024.9 - present</BioYear>
-          Ph.D. in Computer Scienses, UW-Madison 
-        </BioSection>
-        <BioSection>
-          <BioYear>2021.9 - 2024.2</BioYear>
-          M.S. in Computer Science, Korea University
-        </BioSection>
-        <BioSection>
-          <BioYear>2015.3 - 2021.2</BioYear>
-          B.S. in Mechanical Engineering, Korea University
-        </BioSection>
+        <Box display="flex" alignItems="center" mb={4}>
+          <Box flexShrink={0} mr={4}>
+            <Image
+              src="/images/logo/uwm_crestonly.png"
+              alt="UW-Madison Logo"
+              width={logoSize}
+              height={logoSize}
+            />
+          </Box>
+          <BioSection mb={0}>
+            <BioYear>2024.9 - present</BioYear>
+            Ph.D. in Computer Scienses, UW-Madison
+          </BioSection>
+        </Box>
+        <Box display="flex" alignItems="center" mb={4}>
+          <Box flexShrink={0} mr={4}>
+            <Image
+              src="/images/logo/ku.png"
+              alt="Korea University Logo"
+              width={logoSize}
+              height={logoSize}
+            />
+          </Box>
+          <BioSection mb={0}>
+            <BioYear>2021.9 - 2024.2</BioYear>
+            M.S. in Computer Science, Korea University
+          </BioSection>
+        </Box>
+        <Box display="flex" alignItems="center" mb={4}>
+          <Box flexShrink={0} mr={4}>
+            <Image
+              src="/images/logo/ku.png"
+              alt="Korea University Logo"
+              width={logoSize}
+              height={logoSize}
+            />
+          </Box>
+          <BioSection mb={0}>
+            <BioYear>2015.3 - 2021.2</BioYear>
+            B.S. in Mechanical Engineering, Korea University
+          </BioSection>
+        </Box>
       </Section>
 
 
       <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Experience
+        </Heading>
+        <Box display="flex" alignItems="center" mb={4}>
+          <Box flexShrink={0} mr={4}>
+            <Image
+              src="/images/logo/nvidia.png"
+              alt="NVIDIA Logo"
+              width={logoSize}
+              height={logoSize}
+            />
+          </Box>
+          <BioSection mb={0}>
+            <BioYear>2026.5 - 2026.8</BioYear>
+            Research Intern, <Link as={NextLink} href="https://research.nvidia.com/labs/prl/" passHref scroll={false}>NVIDIA High-Fidelity Physics Research Team</Link>
+          </BioSection>
+        </Box>
+      </Section>
+
+
+      <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           Links
         </Heading>
@@ -232,7 +286,8 @@ const Home = () => (
       </Section>
     </Container>
   </Layout>
-)
+  )
+}
 
 export default Home
 export { getServerSideProps } from '../components/chakra'
