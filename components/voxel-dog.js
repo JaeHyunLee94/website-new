@@ -85,13 +85,13 @@ const VoxelDog = () => {
     loadGLTFModel(scene, urlDogGLB, {
       receiveShadow: true,
       castShadow: true,
-      scale: 2.8     
+      scale: 2.8
     }).then(obj => {
       // Uniform scale (if you already set that)
-      // ← Here’s the translation:
-      obj.position.set( 0, 1, 0 )  
+      // ← Here's the translation:
+      obj.position.set( 0, 1, 0 )
       // moves the model +1 on X, +0.5 on Y, and –2 on Z
-    
+
       animate()
       setLoading(false)
     }).catch(err => {

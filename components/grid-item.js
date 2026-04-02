@@ -103,32 +103,49 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 //   </SimpleGrid>
 // )
 
-export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code }) => (
-  <SimpleGrid columns={{sm: 1, md: 4}} gap={4}>
-    <Box w={{sm:"100%", md: "100%"}} textAlign="center">
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-      />
-    </Box>
-    <Box w={{sm: "100%", md: "300%"}} textAlign="left">
-      <Text mt={2} fontSize={20}>
-        {title}
-      </Text>
-      <Text fontSize={14}>
-        {author}
-      </Text>
-      <Text fontSize={14} color="grey" fontStyle="italic">
-        {journal}
-      </Text>
-      {make_link (`${project_page}`, "project page", true)}
-      {make_link (`${paper}`, "paper", true)} 
-      {make_link (`${video}`, "video", true)} 
-      {make_link (`${code}`, "code", false) }
-    </Box>
-  </SimpleGrid>
-)
+export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code }) => {
+  const isVideo = thumbnail && (thumbnail.endsWith('.mp4') || thumbnail.endsWith('.webm'))
+
+  return (
+    <SimpleGrid columns={{sm: 1, md: 4}} gap={4}>
+      <Box w={{sm:"100%", md: "100%"}} textAlign="center">
+        {isVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="grid-item-thumbnail"
+            style={{ width: '100%', borderRadius: '12px' }}
+          >
+            <source src={thumbnail} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={thumbnail}
+            alt={title}
+            className="grid-item-thumbnail"
+          />
+        )}
+      </Box>
+      <Box w={{sm: "100%", md: "300%"}} textAlign="left">
+        <Text mt={2} fontSize={20}>
+          {title}
+        </Text>
+        <Text fontSize={14}>
+          {author}
+        </Text>
+        <Text fontSize={14} color="grey" fontStyle="italic">
+          {journal}
+        </Text>
+        {make_link (`${project_page}`, "project page", true)}
+        {make_link (`${paper}`, "paper", true)}
+        {make_link (`${video}`, "video", true)}
+        {make_link (`${code}`, "code", false) }
+      </Box>
+    </SimpleGrid>
+  )
+}
 
 export const PubGridItemLink = ({ id, title, thumbnail, journal, author, project_page, paper, video, code }) => (
   <SimpleGrid columns={{sm: 1, md: 4}} gap={4}>

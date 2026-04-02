@@ -3,14 +3,14 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { PubGridItem } from '../components/grid-item'
 
-import thumbBlackHole from '../public/images/projects/blackhole.gif'
-import thumbFEM from '../public/images/projects/fem.gif'
-import thumbMPMCUDA from '../public/images/projects/mpm_cuda.gif'
-import thumbStableFluid from '../public/images/projects/stable_fluid.gif'
-import thumbSand from '../public/images/projects/sand.gif'
-import thumbSpatialHashing from '../public/images/projects/collision.gif'
-import thumbCloth from '../public/images/projects/cloth.gif'
-import thumbAge from '../public/images/projects/age.gif'
+const thumbBlackHole = '/videos/projects_blackhole.mp4'
+const thumbFEM = '/videos/projects_fem.mp4'
+const thumbMPMCUDA = '/videos/projects_mpm_cuda.mp4'
+const thumbStableFluid = '/videos/stable_fluid.mp4'
+const thumbSand = '/videos/projects_sand.mp4'
+const thumbSpatialHashing = '/videos/projects_collision.mp4'
+const thumbCloth = '/videos/projects_cloth.mp4'
+const thumbAge = '/videos/projects_age.mp4'
 
 
 
