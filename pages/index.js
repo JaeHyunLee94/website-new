@@ -163,6 +163,10 @@ const Home = () => {
           Will be interning at <Link as={NextLink} href="https://research.nvidia.com/labs/prl/" passHref scroll={false}>NVIDIA High-Fidelity Physics Research</Link> Team this Summer!
         </BioSection>
         <BioSection>
+          <BioYear>2025.11</BioYear>
+          One paper accepted to <b>CAVW</b> journal!
+        </BioSection>
+        <BioSection>
           <BioYear>2024.8</BioYear>
           Started Ph.D. program in Computer Sciences at University of Wisconsin-Madison!
         </BioSection>
