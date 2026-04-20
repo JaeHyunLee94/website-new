@@ -92,7 +92,7 @@ const Home = () => {
             Korea University
           </Link>.
          During that time, I was a member of {' '}
-          <Link as={NextLink} href="https://media.korea.ac.kr/" passHref scroll={false}>
+          <Link as={NextLink} href="https://media.korea.ac.kr/english/" passHref scroll={false}>
             MediaLab
           </Link>, where I was fortunate to be advised by {' '}
           <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" passHref scroll={false}>
