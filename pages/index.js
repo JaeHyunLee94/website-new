@@ -119,6 +119,7 @@ const Home = () => {
           <ListItem>Computer Graphics</ListItem>
           <ListItem>Physics-based simulation</ListItem>
           <ListItem>High-Performance Computing</ListItem>
+          <ListItem>Sparse data structure</ListItem>
           <ListItem>Scalable simulation</ListItem>
           {/* <ListItem>Computational Geometry</ListItem> */}
           <ListItem>Machine Learning</ListItem>
@@ -218,6 +219,7 @@ const Home = () => {
           <BioSection mb={0}>
             <BioYear>2015.3 - 2021.2</BioYear>
             B.S. in Mechanical Engineering, Korea University
+            <Text fontSize="sm" fontStyle="italic" color="gray.500" sx={{ textIndent: 0 }} pl="5em">(Military service 2015.5 - 2017.2)</Text>
           </BioSection>
         </Box>
       </Section>
