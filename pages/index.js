@@ -160,6 +160,10 @@ const Home = () => {
           News
         </Heading>
         <BioSection>
+          <BioYear>2026.8</BioYear>
+          One paper accepted to <b>SIGGRAPH Asia 2026</b>!
+        </BioSection>
+        <BioSection>
           <BioYear>2026.2</BioYear>
           Will be interning at <Link as={NextLink} href="https://research.nvidia.com/labs/prl/" passHref scroll={false}>NVIDIA High-Fidelity Physics Research</Link> Team this Summer!
         </BioSection>

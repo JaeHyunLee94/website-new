@@ -108,26 +108,31 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
 
   return (
     <SimpleGrid columns={{sm: 1, md: 4}} gap={4}>
-      <Box w={{sm:"100%", md: "100%"}} textAlign="center">
-        {isVideo ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="grid-item-thumbnail"
-            style={{ width: '100%', borderRadius: '12px' }}
-          >
-            <source src={thumbnail} type="video/mp4" />
-          </video>
-        ) : (
-          <Image
-            src={thumbnail}
-            alt={title}
-            className="grid-item-thumbnail"
-          />
-        )}
-      </Box>
+      {thumbnail && (
+        <Box w={{sm:"100%", md: "100%"}} textAlign="center">
+          {isVideo ? (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="grid-item-thumbnail"
+              style={{ width: '100%', borderRadius: '12px' }}
+            >
+              <source src={thumbnail} type="video/mp4" />
+            </video>
+          ) : (
+            <Box position="relative" w="100%" h="120px">
+              <Image
+                src={thumbnail}
+                alt={title}
+                fill
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </Box>
+          )}
+        </Box>
+      )}
       <Box w={{sm: "100%", md: "300%"}} textAlign="left">
         <Text mt={2} fontSize={20}>
           {title}

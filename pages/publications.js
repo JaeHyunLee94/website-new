@@ -20,6 +20,24 @@ const Publications = () => (
 
 
       <SimpleGrid columns={{sm:1}} gap={6}>
+
+        <Section>
+          <PubGridItem
+            title="Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains"
+            thumbnail="/images/publications/teaser_mloperator.png"
+            journal="SIGGRAPH Asia 2026"
+            author={
+              <><b>JaeHyun Lee</b> and Eftychios Sifakis</>
+            }
+            project_page="none"
+            paper="none"
+            video="none"
+            code="none"
+            slides="none"
+          >
+          </PubGridItem>
+        </Section>
+
         {/* <Section>
           <PubGridItem
             id="convsolve"
