@@ -80,7 +80,7 @@ const Home = () => {
         </Heading>
         <Paragraph>
         Hi! 👋👋👋<br /><br />
-        I’m a second-year Ph.D. student in Computer Sciences department at the {' '}
+        I’m a third-year Ph.D. student in Computer Sciences department at the {' '}
           <Link as={NextLink} href="https://www.wisc.edu/" passHref scroll={false}>University of Wisconsin-Madison</Link>, advised by {' '}
           <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" passHref scroll={false}>
             Prof. Eftychios Sifakis
@@ -243,7 +243,7 @@ const Home = () => {
             />
           </Box>
           <BioSection mb={0}>
-            <BioYear>2026.5 - 2026.8</BioYear>
+            <BioYear>2026.5 - present</BioYear>
             Research Intern, <Link as={NextLink} href="https://research.nvidia.com/labs/prl/" passHref scroll={false}>NVIDIA High-Fidelity Physics Research Team</Link>
           </BioSection>
         </Box>
