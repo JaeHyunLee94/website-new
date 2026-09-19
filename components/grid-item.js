@@ -159,7 +159,7 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
         <Text fontSize={14}>
           {author}
         </Text>
-        <Text fontSize={14} color="grey" fontStyle="italic">
+        <Text fontSize={14} fontStyle="italic">
           {journal}
         </Text>
         <Text as="div" fontSize={14}>
