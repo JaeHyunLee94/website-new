@@ -39,12 +39,8 @@ const Publications = () => (
   title     = {Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains},
   author    = {Lee, JaeHyun and Sifakis, Eftychios},
   booktitle = {SIGGRAPH Asia 2026 Conference Papers},
-  series    = {SA Conference Papers '26},
   year      = {2026},
-  location  = {Kuala Lumpur, Malaysia},
-  publisher = {ACM},
-  doi       = {10.1145/3829340.3842319},
-  isbn      = {979-8-4007-2842-6/2026/12}
+  doi       = {10.1145/3829340.3842319}
 }`}
           >
           </PubGridItem>
