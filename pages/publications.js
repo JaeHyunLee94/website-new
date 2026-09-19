@@ -24,16 +24,16 @@ const Publications = () => (
         <Section>
           <PubGridItem
             title="Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains"
-            thumbnail="/images/publications/teaser_mloperator.png"
+            thumbnail="/images/publications/papers_2138s2-file2.gif"
             journal="SIGGRAPH Asia 2026"
             author={
               <><b>JaeHyun Lee</b> and Eftychios Sifakis</>
             }
             project_page="none"
-            paper="none"
-            video="none"
+            paper="/papers/mloperator/paper.pdf"
+            video="/videos/mloperator_supp.mp4"
             code="none"
-            slides="none"
+            supp="/papers/mloperator/supplementary_material.pdf"
           >
           </PubGridItem>
         </Section>

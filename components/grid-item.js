@@ -3,19 +3,22 @@ import Image from 'next/image'
 import { Box, Text, Link, LinkBox, LinkOverlay, SimpleGrid } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
-var make_link = function (url, text, slash) {
+var make_link = function (url, text) {
   var none="none"
-  if (none.localeCompare(url) == 0) {
-    return ''
+  if (!url || none.localeCompare(url) == 0) {
+    return null
   }
-  if (slash) {
-    // return <><Link as={NextLink} href={url} target="_blank">{text}</Link> / </>
-    return <Text as="span" fontSize={14} display="inline"><nobr>{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link> / </nobr></Text>
-  }
-  else {
-    // return <Link as={NextLink} href={url} target="_blank">{text}</Link>
-    return <Text as="span" fontSize={14} display="inline">{' '}<Link as={NextLink} href={url} target="_blank">{text}</Link></Text>
-  }
+  return <Link as={NextLink} href={url} target="_blank">[{text}]</Link>
+}
+
+var render_links = function (links) {
+  const filtered = links.filter(Boolean)
+  if (filtered.length === 0) return null
+  return (
+    <Text fontSize={14} display="inline">
+      {filtered.reduce((acc, el, i) => i === 0 ? [el] : [...acc, ' | ', el], [])}
+    </Text>
+  )
 }
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -103,7 +106,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 //   </SimpleGrid>
 // )
 
-export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code }) => {
+export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code, supp }) => {
   const isVideo = thumbnail && (thumbnail.endsWith('.mp4') || thumbnail.endsWith('.webm'))
 
   return (
@@ -122,14 +125,12 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
               <source src={thumbnail} type="video/mp4" />
             </video>
           ) : (
-            <Box position="relative" w="100%" h="120px">
-              <Image
-                src={thumbnail}
-                alt={title}
-                fill
-                style={{ objectFit: 'cover', borderRadius: '12px' }}
-              />
-            </Box>
+            <img
+              src={thumbnail}
+              alt={title}
+              className="grid-item-thumbnail"
+              style={{ width: '100%', borderRadius: '12px' }}
+            />
           )}
         </Box>
       )}
@@ -143,10 +144,13 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
         <Text fontSize={14} color="grey" fontStyle="italic">
           {journal}
         </Text>
-        {make_link (`${project_page}`, "project page", true)}
-        {make_link (`${paper}`, "paper", true)}
-        {make_link (`${video}`, "video", true)}
-        {make_link (`${code}`, "code", false) }
+        {render_links([
+          make_link(`${project_page}`, "project page"),
+          make_link(`${paper}`, "paper"),
+          make_link(`${video}`, "video"),
+          supp ? make_link(`${supp}`, "supplement") : null,
+          make_link(`${code}`, "code"),
+        ])}
       </Box>
     </SimpleGrid>
   )
@@ -174,10 +178,12 @@ export const PubGridItemLink = ({ id, title, thumbnail, journal, author, project
       <Text fontSize={14} color="grey" fontStyle="italic">
         {journal}
       </Text>
-      {make_link (`${project_page}`, "project page", true)}
-      {make_link (`${paper}`, "paper", true)} 
-      {make_link (`${video}`, "video", true)} 
-      {make_link (`${code}`, "code", false) }
+      {render_links([
+        make_link(`${project_page}`, "project page"),
+        make_link(`${paper}`, "paper"),
+        make_link(`${video}`, "video"),
+        make_link(`${code}`, "code"),
+      ])}
     </Box>
   </SimpleGrid>
 )
