@@ -35,6 +35,17 @@ const Publications = () => (
             video="/videos/mloperator_supp.mp4"
             code="none"
             supp="/papers/mloperator/supplementary_material.pdf"
+            bibtex={`@inproceedings{lee2026mloperator,
+  title     = {Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains},
+  author    = {Lee, JaeHyun and Sifakis, Eftychios},
+  booktitle = {SIGGRAPH Asia 2026 Conference Papers},
+  series    = {SA Conference Papers '26},
+  year      = {2026},
+  location  = {Kuala Lumpur, Malaysia},
+  publisher = {ACM},
+  doi       = {10.1145/3829340.3842319},
+  isbn      = {979-8-4007-2842-6/2026/12}
+}`}
           >
           </PubGridItem>
         </Section>
@@ -71,6 +82,16 @@ const Publications = () => (
             video="https://drive.google.com/file/d/1dB_Nc5k5oSwC9TaKBFeRLPEFaWt_ckt4/view"
             code="none"
             slides="none"
+            bibtex={`@article{kim2025dimension,
+  title     = {Dimension Expansion for Untangling Mass-Spring System},
+  author    = {Kim, Seung-wook and Lee, HuiSeong and Lee, JaeHyun and Um, Kiwon and Han, JungHyun},
+  journal   = {Computer Animation and Virtual Worlds},
+  volume    = {36},
+  number    = {6},
+  pages     = {e70079},
+  year      = {2025},
+  publisher = {Wiley Online Library}
+}`}
           >
           </PubGridItem>
         </Section>
@@ -90,6 +111,16 @@ const Publications = () => (
             video="https://www.youtube.com/watch?v=ht_7iMMiJic"
             code="none"
             slides="none"
+            bibtex={`@article{jeong2024momentum,
+  title     = {Momentum-preserving inversion alleviation for elastic material simulation},
+  author    = {Jeong, Heejo and Kim, Seung-wook and Lee, JaeHyun and Um, Kiwon and Kee, Min Hyung and Han, JungHyun},
+  journal   = {Computer Animation and Virtual Worlds},
+  volume    = {35},
+  number    = {3},
+  pages     = {e2249},
+  year      = {2024},
+  publisher = {Wiley Online Library}
+}`}
           >
           </PubGridItem>
         </Section>
@@ -109,6 +140,16 @@ const Publications = () => (
             video="https://www.youtube.com/watch?v=4UWKqwnEQkk"
             code="none"
             slides="none"
+            bibtex={`@article{lee2023inversion,
+  title     = {Inversion alleviation for stable elastic body simulation},
+  author    = {Lee, JaeHyun and Kim, Seung-wook and Um, Kiwon and Kee, Min Hyung and Han, JungHyun},
+  journal   = {Computer Animation and Virtual Worlds},
+  volume    = {34},
+  number    = {3-4},
+  pages     = {e2183},
+  year      = {2023},
+  publisher = {Wiley Online Library}
+}`}
           >
           </PubGridItem>
         </Section>

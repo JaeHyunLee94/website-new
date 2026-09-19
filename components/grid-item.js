@@ -1,7 +1,29 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, Link, LinkBox, LinkOverlay, SimpleGrid } from '@chakra-ui/react'
+import { Box, Text, Link, LinkBox, LinkOverlay, SimpleGrid, Popover, PopoverTrigger, PopoverContent, PopoverBody, PopoverCloseButton, Button, useClipboard } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+
+const CiteButton = ({ bibtex }) => {
+  const { hasCopied, onCopy } = useClipboard(bibtex)
+  return (
+    <Popover placement="bottom-start" isLazy>
+      <PopoverTrigger>
+        <Link as="span" cursor="pointer">[cite]</Link>
+      </PopoverTrigger>
+      <PopoverContent width="580px">
+        <PopoverCloseButton />
+        <PopoverBody pt={6} pb={3}>
+          <Box as="pre" fontSize={11} p={3} bg="gray.100" borderRadius="md" whiteSpace="pre-wrap" fontFamily="mono" overflowX="auto">
+            {bibtex}
+          </Box>
+          <Button size="xs" mt={2} colorScheme="teal" onClick={onCopy}>
+            {hasCopied ? 'Copied!' : 'Copy'}
+          </Button>
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
+  )
+}
 
 var make_link = function (url, text) {
   var none="none"
@@ -11,14 +33,10 @@ var make_link = function (url, text) {
   return <Link as={NextLink} href={url} target="_blank">[{text}]</Link>
 }
 
-var render_links = function (links) {
+var join_links = function (links) {
   const filtered = links.filter(Boolean)
   if (filtered.length === 0) return null
-  return (
-    <Text fontSize={14} display="inline">
-      {filtered.reduce((acc, el, i) => i === 0 ? [el] : [...acc, ' | ', el], [])}
-    </Text>
-  )
+  return filtered.reduce((acc, el, i) => i === 0 ? [el] : [...acc, ' | ', el], [])
 }
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -106,7 +124,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 //   </SimpleGrid>
 // )
 
-export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code, supp }) => {
+export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code, supp, bibtex }) => {
   const isVideo = thumbnail && (thumbnail.endsWith('.mp4') || thumbnail.endsWith('.webm'))
 
   return (
@@ -144,13 +162,16 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
         <Text fontSize={14} color="grey" fontStyle="italic">
           {journal}
         </Text>
-        {render_links([
-          make_link(`${project_page}`, "project page"),
-          make_link(`${paper}`, "paper"),
-          make_link(`${video}`, "video"),
-          supp ? make_link(`${supp}`, "supplement") : null,
-          make_link(`${code}`, "code"),
-        ])}
+        <Text as="div" fontSize={14}>
+          {join_links([
+            make_link(`${project_page}`, "project page"),
+            make_link(`${paper}`, "paper"),
+            make_link(`${video}`, "video"),
+            supp ? make_link(`${supp}`, "supplement") : null,
+            make_link(`${code}`, "code"),
+            bibtex ? <CiteButton bibtex={bibtex} /> : null,
+          ])}
+        </Text>
       </Box>
     </SimpleGrid>
   )
@@ -178,12 +199,14 @@ export const PubGridItemLink = ({ id, title, thumbnail, journal, author, project
       <Text fontSize={14} color="grey" fontStyle="italic">
         {journal}
       </Text>
-      {render_links([
-        make_link(`${project_page}`, "project page"),
-        make_link(`${paper}`, "paper"),
-        make_link(`${video}`, "video"),
-        make_link(`${code}`, "code"),
-      ])}
+      <Text fontSize={14}>
+        {join_links([
+          make_link(`${project_page}`, "project page"),
+          make_link(`${paper}`, "paper"),
+          make_link(`${video}`, "video"),
+          make_link(`${code}`, "code"),
+        ])}
+      </Text>
     </Box>
   </SimpleGrid>
 )
