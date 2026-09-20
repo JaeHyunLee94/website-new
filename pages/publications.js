@@ -28,10 +28,11 @@ const Publications = () => (
             thumbnail="/images/publications/papers_2138s2-file2.gif"
             journal="SIGGRAPH Asia 2026"
             author={
-              <><b>JaeHyun Lee</b> and <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" target="_blank">Eftychios Sifakis</Link></>
+              <><b>JaeHyun Lee</b> and <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" target="_blank" color="inherit">Eftychios Sifakis</Link></>
             }
             project_page="none"
             paper="/papers/mloperator/paper.pdf"
+            paper_lowres="/papers/mloperator/paper_lowres.pdf"
             video="/videos/mloperator_supp.mp4"
             code="none"
             supp="/papers/mloperator/supplementary_material.pdf"
@@ -71,7 +72,7 @@ const Publications = () => (
             journal="Computer Animation and Virtual Worlds (CAVW), 2025"
             project_page="none"
             author={
-                <><Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank">Seung-wook Kim</Link>, HuiSeong Lee, <b>JaeHyun Lee</b>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank">Kiwon Um</Link>, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank">JungHyun Han</Link></>
+                <><Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="inherit">Seung-wook Kim</Link>, HuiSeong Lee, <b>JaeHyun Lee</b>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="inherit">Kiwon Um</Link>, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank" color="inherit">JungHyun Han</Link></>
             }
             // <p>Seung-wook Kim, HuiSeong Lee, <b>JaeHyun Lee</b>, Kiwon Um, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.70079"
@@ -100,7 +101,7 @@ const Publications = () => (
             journal="Computer Animation and Virtual Worlds (CAVW), 2024"
             project_page="none"
             author={
-              <><Link as={NextLink} href="https://heejojeong.github.io/" target="_blank">Heejo Jeong</Link>, <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank">Seung-wook Kim</Link>, <b>JaeHyun Lee</b>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank">Kiwon Um</Link>, Min Hyung Kee, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank">JungHyun Han</Link></>
+              <><Link as={NextLink} href="https://heejojeong.github.io/" target="_blank" color="inherit">Heejo Jeong</Link>, <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="inherit">Seung-wook Kim</Link>, <b>JaeHyun Lee</b>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="inherit">Kiwon Um</Link>, Min Hyung Kee, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank" color="inherit">JungHyun Han</Link></>
             }
             // <p>Heejo Jeong, Seung-wook Kim, <b>JaeHyun Lee</b>, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.2249"
@@ -129,7 +130,7 @@ const Publications = () => (
             journal="Computer Animation and Virtual Worlds (CAVW), 2023"
             project_page="none"
             author={
-              <><b>JaeHyun Lee</b>, <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank">Seung-wook Kim</Link>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank">Kiwon Um</Link>, Min Hyung Kee, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank">JungHyun Han</Link></>
+              <><b>JaeHyun Lee</b>, <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="inherit">Seung-wook Kim</Link>, <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="inherit">Kiwon Um</Link>, Min Hyung Kee, and <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank" color="inherit">JungHyun Han</Link></>
             }
             // <p><b>JaeHyun Lee</b>, Seung-wook Kim, Kiwon Um, Min Hyung Kee, and JungHyun Han</p>
             paper="https://onlinelibrary.wiley.com/doi/10.1002/cav.2183"

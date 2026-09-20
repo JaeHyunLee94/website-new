@@ -124,7 +124,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 //   </SimpleGrid>
 // )
 
-export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, video, code, supp, bibtex }) => {
+export const PubGridItem = ({ title, thumbnail, journal, author, project_page, paper, paper_lowres, video, code, supp, bibtex }) => {
   const isVideo = thumbnail && (thumbnail.endsWith('.mp4') || thumbnail.endsWith('.webm'))
 
   return (
@@ -166,6 +166,7 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
           {join_links([
             make_link(`${project_page}`, "project page"),
             make_link(`${paper}`, "paper"),
+            paper_lowres ? make_link(`${paper_lowres}`, "paper (low res)") : null,
             make_link(`${video}`, "video"),
             supp ? make_link(`${supp}`, "supplement") : null,
             make_link(`${code}`, "code"),
