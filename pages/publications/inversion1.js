@@ -47,9 +47,9 @@ const Inversion1 = () => (
           <Text fontSize={15} mb={4} letterSpacing="0.01em">
             <b>JaeHyun Lee</b><sup>1</sup>
             {'    '}
-            <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="teal.500">Seung-wook Kim</Link><sup>2</sup>
+            <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="teal.500">Seung-wook Kim</Link><sup>1</sup>
             {'    '}
-            <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="teal.500">Kiwon Um</Link><sup>3</sup>
+            <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="teal.500">Kiwon Um</Link><sup>2</sup>
             {'    '}
             <Link as={NextLink} href="https://minh702.github.io/" target="_blank" color="teal.500">Min Hyung Kee</Link><sup>1</sup>
             {'    '}
@@ -58,8 +58,7 @@ const Inversion1 = () => (
 
           <Text fontSize={13} color="gray.500" mb={8} letterSpacing="0.02em">
             <sup>1</sup>Korea University&nbsp;&nbsp;
-            <sup>2</sup>Hankuk University of Foreign Studies&nbsp;&nbsp;
-            <sup>3</sup>Télécom Paris
+            <sup>2</sup>Télécom Paris
           </Text>
 
           <Box display="flex" gap={3} flexWrap="wrap" justifyContent="center">
@@ -69,7 +68,7 @@ const Inversion1 = () => (
       </Section>
 
       <Section delay={0.2}>
-        <Box mb={8}>
+        <Box mb={8} mx="auto" maxW="700px">
           <video autoPlay loop muted playsInline style={{ width: '100%', borderRadius: '12px' }}>
             <source src="/videos/inversion1.mp4" type="video/mp4" />
           </video>
