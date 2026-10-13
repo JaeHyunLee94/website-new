@@ -25,7 +25,7 @@ const Publications = () => (
         <Section>
           <PubGridItem
             title="Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains"
-            thumbnail="/images/publications/papers_2138s2-file2.gif"
+            thumbnail="/videos/mloperator_teaser.mp4"
             journal="SIGGRAPH Asia 2026"
             author={
               <><b>JaeHyun Lee</b> and <Link as={NextLink} href="https://pages.cs.wisc.edu/~sifakis/" target="_blank" color="inherit">Eftychios Sifakis</Link></>

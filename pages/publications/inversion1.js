@@ -2,7 +2,6 @@ import NextLink from 'next/link'
 import { Container, Heading, Box, Text, Link, Divider } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
-import CiteButton from '../../components/cite-button'
 
 const bibtex = `@article{lee2023inversion,
   title     = {Inversion alleviation for stable elastic body simulation},
@@ -36,27 +35,35 @@ const Inversion1 = () => (
     <Container maxW="860px" px={6} mx="auto">
 
       <Section delay={0.1}>
-        <Heading as="h2" fontSize={26} mt={6} mb={3}>
-          Inversion alleviation for stable elastic body simulation
-        </Heading>
+        <Box textAlign="center" mt={6} mb={6}>
+          <Heading as="h2" fontSize={26} mb={5}>
+            Inversion alleviation for stable elastic body simulation
+          </Heading>
 
-        <Text fontSize={15} mb={1}>
-          <b>JaeHyun Lee</b>,{' '}
-          <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="inherit">Seung-wook Kim</Link>,{' '}
-          <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="inherit">Kiwon Um</Link>,{' '}
-          <Link as={NextLink} href="https://minh702.github.io/" target="_blank" color="inherit">Min Hyung Kee</Link>,{' '}
-          <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank" color="inherit">JungHyun Han</Link>
-        </Text>
+          <Text fontSize={17} fontStyle="italic" mb={6}>
+            Computer Animation and Virtual Worlds (CAVW), 2023
+          </Text>
 
-        <Text fontSize={14} fontStyle="italic" mb={6}>
-          Computer Animation and Virtual Worlds (CAVW), 2023
-        </Text>
+          <Text fontSize={15} mb={4} letterSpacing="0.01em">
+            <b>JaeHyun Lee</b><sup>1</sup>
+            {'    '}
+            <Link as={NextLink} href="https://rtg.hufs.ac.kr/people/" target="_blank" color="teal.500">Seung-wook Kim</Link><sup>2</sup>
+            {'    '}
+            <Link as={NextLink} href="https://perso.telecom-paristech.fr/kum/" target="_blank" color="teal.500">Kiwon Um</Link><sup>3</sup>
+            {'    '}
+            <Link as={NextLink} href="https://minh702.github.io/" target="_blank" color="teal.500">Min Hyung Kee</Link><sup>1</sup>
+            {'    '}
+            <Link as={NextLink} href="https://media.korea.ac.kr/people/jhan/" target="_blank" color="teal.500">JungHyun Han</Link><sup>1</sup>
+          </Text>
 
-        <Box display="flex" gap={3} flexWrap="wrap" mb={8}>
-          <LinkBtn href="https://onlinelibrary.wiley.com/doi/10.1002/cav.2183">[paper]</LinkBtn>
-          <LinkBtn href="https://www.youtube.com/watch?v=4UWKqwnEQkk">[video]</LinkBtn>
-          <Box px={4} py={2} borderWidth={1} borderRadius="md" fontSize={14}>
-            <CiteButton bibtex={bibtex} />
+          <Text fontSize={13} color="gray.500" mb={8} letterSpacing="0.02em">
+            <sup>1</sup>Korea University&nbsp;&nbsp;
+            <sup>2</sup>Hankuk University of Foreign Studies&nbsp;&nbsp;
+            <sup>3</sup>Télécom Paris
+          </Text>
+
+          <Box display="flex" gap={3} flexWrap="wrap" justifyContent="center">
+            <LinkBtn href="https://onlinelibrary.wiley.com/doi/10.1002/cav.2183">[paper]</LinkBtn>
           </Box>
         </Box>
       </Section>
@@ -73,7 +80,14 @@ const Inversion1 = () => (
         <Heading as="h3" fontSize={18} mb={3}>Abstract</Heading>
         <Divider mb={4} />
         <Text fontSize={14} lineHeight={1.8}>
-          {/* TODO: add abstract */}
+          In general, it is not easy to simulate an elastic body that undergoes large deformations.
+          Especially when its elements are inverted or tangled, i.e., when its vertices penetrate
+          its polygons, simulation often fails. In this paper, we propose a simple yet highly
+          effective method for alleviating the inversion problems of elastic bodies. Our experiments
+          made with typical optimization-based solvers demonstrate that the proposed method
+          successfully stabilizes the solvers and produces visually plausible motions. We believe
+          that our method can be widely adopted by a variety of state-of-the-art elastic-body
+          simulators thanks to its simplicity.
         </Text>
       </Section>
 
@@ -90,6 +104,14 @@ const Inversion1 = () => (
             allowFullScreen
             style={{ borderRadius: '12px' }}
           />
+        </Box>
+      </Section>
+
+      <Section delay={0.5}>
+        <Heading as="h3" fontSize={18} mt={8} mb={3}>BibTeX</Heading>
+        <Divider mb={4} />
+        <Box as="pre" fontSize={13} p={4} bg="gray.100" borderRadius="md" whiteSpace="pre-wrap" fontFamily="mono" overflowX="auto">
+          {bibtex}
         </Box>
       </Section>
 

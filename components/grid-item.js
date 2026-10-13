@@ -133,7 +133,9 @@ export const PubGridItem = ({ title, thumbnail, journal, author, project_page, p
       )}
       <Box w={{sm: "100%", md: "300%"}} textAlign="left">
         <Text mt={2} fontSize={20}>
-          {title}
+          {project_page && project_page !== 'none'
+            ? <Link as={NextLink} href={project_page} _hover={{ textDecoration: 'underline' }} color="inherit">{title}</Link>
+            : title}
         </Text>
         <Text fontSize={14}>
           {author}

@@ -31,7 +31,7 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.xl" pt={14}>
-        <LazyVoxelDog />
+        {!router.asPath.startsWith('/publications/') && <LazyVoxelDog />}
 
         {children}
 
