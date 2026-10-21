@@ -107,9 +107,9 @@ const Home = () => {
         </Paragraph>
 
 
-        {/* <Text color="red.400" fontWeight="bold" mt={4}>
-          📢 I am actively seeking internship opportunities for 2026 Summer!
-        </Text> */}
+        <Text color="red.400" fontWeight="bold" mt={4}>
+          📢 I am actively seeking internship opportunities for 2027 Summer!
+        </Text>
 
 
         <Heading as="h3" variant="section-title" mt={10}>
