@@ -37,7 +37,7 @@ const MLOperator = () => (
       <meta name="citation_publication_date" content="2026" />
       <meta name="citation_conference_title" content="SIGGRAPH Asia 2026 Conference Papers" />
       <meta name="citation_doi" content="10.1145/3829340.3842319" />
-      <meta name="citation_pdf_url" content="https://jaehyunlee.me/papers/mloperator/paper.pdf" />
+      <meta name="citation_pdf_url" content="https://www.leejaehyun179.com/papers/mloperator/paper.pdf" />
     </Head>
     <Container maxW="860px" px={6} mx="auto">
 
