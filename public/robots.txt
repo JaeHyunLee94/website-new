@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Prevent supplementary materials from being indexed as standalone papers
+Disallow: /papers/mloperator/supplementary_material.pdf

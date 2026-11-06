@@ -56,6 +56,15 @@ module.exports = {
           },
         ],
       },
+      {
+        source: '/papers/:path*/supplementary_material.pdf',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+      },
     ]
   },
 }
