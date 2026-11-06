@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+import Head from 'next/head'
 import { Container, Heading, Box, Text, Link, Divider } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import Section from '../../components/section'
@@ -29,6 +30,15 @@ const LinkBtn = ({ href, children }) => (
 
 const MLOperator = () => (
   <Layout title="ML Operator Lexicon">
+    <Head>
+      <meta name="citation_title" content="Machine Learning Operator Lexicon for Partial Differential Equation Solvers on Irregular and Sparse Domains" />
+      <meta name="citation_author" content="Lee, JaeHyun" />
+      <meta name="citation_author" content="Sifakis, Eftychios" />
+      <meta name="citation_publication_date" content="2026" />
+      <meta name="citation_conference_title" content="SIGGRAPH Asia 2026 Conference Papers" />
+      <meta name="citation_doi" content="10.1145/3829340.3842319" />
+      <meta name="citation_pdf_url" content="https://jaehyunlee.me/papers/mloperator/paper.pdf" />
+    </Head>
     <Container maxW="860px" px={6} mx="auto">
 
       <Section delay={0.1}>
